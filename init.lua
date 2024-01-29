@@ -31,7 +31,7 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true, -- enable or disable format on save globally
+        enabled = false, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
@@ -52,6 +52,26 @@ return {
     servers = {
       -- "pyright"
     },
+--[[
+    config = {
+      clangd = function()
+        return {
+          cmd = {"clangd",
+                 ""};
+          filetypes = {"cpp", "h", "c"};
+          root_dir = require("lspconfig.util").root_pattern(
+            '.clangd',
+            '.clang-tidy',
+            '.clang-format',
+            'compile_commands.json',
+            'compile_flags.txt',
+            'configure.ac',
+            '.git'
+          );
+        }
+      end,
+    },
+--]]
   },
 
   -- Configure require("lazy").setup() options

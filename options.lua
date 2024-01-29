@@ -7,6 +7,15 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
+    shiftwidth = 8,
+    tabstop = 8,
+    textwidth = 78,
+    expandtab = false,
+    autoindent = true,
+    smartindent = true,
+    smarttab = true,
+    backspace = "eol,start,indent",
+
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
