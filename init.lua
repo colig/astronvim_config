@@ -52,12 +52,14 @@ return {
     servers = {
       -- "pyright"
     },
---[[
     config = {
       clangd = function()
         return {
           cmd = {"clangd",
-                 ""};
+                 "--background-index",
+                 "--completion-style=detailed",
+                 -- "--compile-commands-dir=build",
+                 "--pch-storage=disk"};
           filetypes = {"cpp", "h", "c"};
           root_dir = require("lspconfig.util").root_pattern(
             '.clangd',
@@ -68,10 +70,12 @@ return {
             'configure.ac',
             '.git'
           );
+          capabilities = {
+            offsetEncoding = "utf-8",
+          };
         }
       end,
     },
---]]
   },
 
   -- Configure require("lazy").setup() options
