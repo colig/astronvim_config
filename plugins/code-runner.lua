@@ -18,7 +18,8 @@ return {
           "$dir/$fileNameWithoutExt",
         },
         cpp = {
-          "g++ -g -I. -I./include -o $fileNameWithoutExt $dir/$fileName &&",
+          "echo bear -- g++ -g -std=c++11 -Wall -Werror -pedantic-errors -fsanitize=undefined -I. -I./include -o $fileNameWithoutExt $dir/$fileName &&",
+          "bear -- g++ -g -std=c++11 -Wall -Werror -pedantic-errors -fsanitize=undefined -I. -I./include -o $fileNameWithoutExt $dir/$fileName &&",
           "./$fileNameWithoutExt",
         },
       },
