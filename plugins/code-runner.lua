@@ -13,9 +13,9 @@ return {
         python = "python3 -u",
         typescript = "deno run",
         rust = {
+          "set -x &&",
           "cd $dir &&",
-          "rustc $fileName &&",
-          "$dir/$fileNameWithoutExt",
+          "cargo run",
         },
         cpp = {
           "set -x &&",
