@@ -7,8 +7,15 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
-    shiftwidth = 8,
-    tabstop = 8,
+
+    -- for linux
+    -- shiftwidth = 8,
+    -- tabstop = 8,
+
+    -- for windows
+    shiftwidth = 4,
+    tabstop = 4,
+
     textwidth = 78,
     expandtab = false,
     autoindent = true,
