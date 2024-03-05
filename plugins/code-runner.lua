@@ -21,13 +21,13 @@ return {
         },
         cpp = {
           "set -x &&",
-          "bear -- g++ -g -std=c++11 -Wall -Werror -pedantic-errors -fsanitize=undefined -I. -I./include -o $fileNameWithoutExt $dir/$fileName &&",
-          "./$fileNameWithoutExt",
+          "bear -- g++ -g -std=c++11 -Wall -Werror -pedantic-errors -fsanitize=undefined -I. -I./include -o $fileNameWithoutExt.out $dir/$fileName &&",
+          "./$fileNameWithoutExt.out",
         },
         c = {
           "set -x &&",
-          "bear -- gcc -g -std=c99 -Wall -Werror -pedantic-errors -fsanitize=undefined -I. -I./include -o $fileNameWithoutExt $dir/$fileName &&",
-          "./$fileNameWithoutExt",
+          "bear -- gcc -g -std=c99 -I. -I./include -o $fileNameWithoutExt.out $dir/$fileName &&",
+          "./$fileNameWithoutExt.out",
         },
 
       },
